@@ -25,7 +25,7 @@ The dataset consists of sentences in multiple languages, including English, Mand
 
 ### Setup
 1. I used Amazon SageMaker Studio Lab to create a project with a Jupyter Notebook instance running on a GPU-enabled kernel. ![Alt Text](amazon_sage_maker_studio_lab.png)
-![Alt Text](amazon_sage_maker_studio_lab.png)
+![Alt Text](amazon_sagemaker_lab.png)
 
 2. I uploaded the augmented_data.tsv file to an S3 bucket named "sagemaker-studio-r3fybtokjrb". ![Alt Text](s3_bucket_data.png)
 3. I then Created an IAM role for the user sandeepvarma and add permissions AmazonS3FullAccess. ![Alt Text](iam_policy.png)
