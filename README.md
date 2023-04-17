@@ -33,7 +33,7 @@ import os
 os.environ['AWS_ACCESS_KEY_ID'] = 'xxxxxxxxxxxx'
 os.environ['AWS_SECRET_ACCESS_KEY'] = 'xxxxxxxxxxxxxx'
 ```
-##Notebook
+## Notebook
 The Text_Classification_BERT.ipynb notebook performs the classification using the BERT-based multilingual model with the following hyperparameters:
 
 - batch_size: 16
@@ -46,10 +46,10 @@ In the notebook, I first imported the necessary helper functions and prepared th
 
 After training the model, I evaluated its performance on the validation set and obtained a validation accuracy of 0.6511627906976745.
 
-##Error Analysis
+## Error Analysis
 I performed error analysis on the predictions to understand the model's performance and identify potential areas for improvement.
 
-Usage
+## Usage
 - Open the Text_Classification_BERT.ipynb notebook in Amazon SageMaker Studio Lab.
 - Ensure that the necessary libraries are installed (e.g., pandas, transformers, torch, etc.).
 - Set the AWS access key ID and secret access key as environment variables in the notebook as shown in the Setup section.
