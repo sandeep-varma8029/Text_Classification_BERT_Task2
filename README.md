@@ -24,9 +24,11 @@ The dataset consists of sentences in multiple languages, including English, Mand
 - "14": Other
 
 ### Setup
-1. I Uploaded the augmented_data.tsv file to an S3 bucket: sagemaker-studio-r3fybtokjrb.
-2. I then Created an IAM role for the user sandeepvarma and add permissions AmazonS3FullAccess.
-3. Next,Set the AWS access key ID and secret access key as environment variables in your Jupyter Notebook:
+1. I used Amazon SageMaker Studio Lab to create a project with a Jupyter Notebook instance running on a GPU-enabled kernel. ![Alt Text](amazon_sage_maker_studio_lab.png)
+
+2. I uploaded the augmented_data.tsv file to an S3 bucket named "sagemaker-studio-r3fybtokjrb".
+3. I then Created an IAM role for the user sandeepvarma and add permissions AmazonS3FullAccess.
+4. Next, I Set the AWS access key ID and secret access key as environment variables in your Jupyter Notebook:
 ```python
 import os
 
@@ -41,7 +43,17 @@ The Text_Classification_BERT.ipynb notebook performs the classification using th
 - epochs: 25
 
 I also used a helper script (helpers.py) that contains the necessary functions to tokenize and format the sentences, as well as a function to calculate flat accuracy.
+To load the dataset from the S3 bucket, I used the following code snippet:
 
+```python
+import boto3
+import pandas as pd
+from io import StringIO
+
+s3 = boto3.client('s3')
+
+s3_uri = 's3://sagemaker-studio-r3fybtokjrb/augmented_data.tsv'
+```
 In the notebook, I first imported the necessary helper functions and prepared the dataset by shuffling and tokenizing the sentences. Then, I created a BERT model for classification and trained it using the specified hyperparameters.
 
 After training the model, I evaluated its performance on the validation set and obtained a validation accuracy of 0.6511627906976745.
