@@ -24,7 +24,7 @@ The dataset consists of sentences in multiple languages, including English, Mand
 - "14": Other
 
 ### Setup
-1. I Upload the augmented_data.tsv file to an S3 bucket: sagemaker-studio-r3fybtokjrb.
+1. I Uploaded the augmented_data.tsv file to an S3 bucket: sagemaker-studio-r3fybtokjrb.
 2. I then Created an IAM role for the user sandeepvarma and add permissions AmazonS3FullAccess.
 3. Next,Set the AWS access key ID and secret access key as environment variables in your Jupyter Notebook:
 ```python
@@ -42,7 +42,7 @@ The Text_Classification_BERT.ipynb notebook performs the classification using th
 
 I also used a helper script (helpers.py) that contains the necessary functions to tokenize and format the sentences, as well as a function to calculate flat accuracy.
 
-In the notebook, I first imported the necessary helper functions and prepared the dataset by shuffling and tokenizing the sentences. Then, I created a BERT model for sequence classification and trained it using the specified hyperparameters.
+In the notebook, I first imported the necessary helper functions and prepared the dataset by shuffling and tokenizing the sentences. Then, I created a BERT model for classification and trained it using the specified hyperparameters.
 
 After training the model, I evaluated its performance on the validation set and obtained a validation accuracy of 0.6511627906976745.
 
